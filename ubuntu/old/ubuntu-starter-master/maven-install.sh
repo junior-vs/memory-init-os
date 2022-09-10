@@ -13,9 +13,11 @@ sudo ln -s /opt/apache-maven-3.6.3 /opt/maven
 
 
 #export JAVA_HOME=/usr/lib/jvm/java-14-oracle
-#export M2_HOME=/opt/maven
 #export MAVEN_HOME=/opt/maven
-#export PATH=${M2_HOME}/bin:${PATH}
+#export MAVEN_OPTS="-Drepository.local.maven=/mnt/d/develop/tools/apache-maven/"
+#export PATH=${M2_HOME}/bin:${MAVEN_OPTS}:${JAVA_HOME}:${PATH}
+
+
 #sudo chmod +x /etc/profile.d/maven.sh
 #source /etc/profile.d/maven.sh
 #mvn -version
